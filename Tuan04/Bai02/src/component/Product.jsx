@@ -3,7 +3,7 @@ import Item from "./Item";
 import './product.css';
 
 
-export default function Bai02() {
+export default function Product() {
 
     const [arr, setArr] = useState([]);
 

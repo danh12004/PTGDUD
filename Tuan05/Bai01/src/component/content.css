@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+content {
+    padding: 100px 20px;
+}
+
+.container {
+    width: 80%;
+}
+
+/* Sidebar Filters */
+.filters {
+    width: 350px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.filters h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.filters h4 {
+    margin-bottom: 12px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.filter-group .group1 {
+    margin-right: 60px;
+}
+
+.filter-group .group1 label {
+    padding: 4px 0;
+    display: block;
+    margin: 8px 0;
+}
+
+.filter-group .group2 label {
+    padding: 4px 0;
+    display: block;
+    margin: 8px 0;
+}
+
+.filter-group .group1 label input, 
+.filter-group .group2 label input {
+    margin-right: 10px;
+}
+
+.filter-time {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0 20px 0;
+}
+
+.filter-star div {
+    padding: 10px 0;
+}
+
+.apply-btn {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filters .f4 {
+    margin-top: 14px;
+}
+
+/* No Results Section */
+.no-results {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+}
+
+.no-results h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.no-results span {
+    font-weight: bold;
+}
+
+.no-results img {
+    width: 120px;
+    margin: 20px 0;
+}
+
+.no-results p {
+    margin-bottom: 20px;
+}
+
+.suggestions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tag {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.pink { 
+    background-color: #ffe0ea; 
+    color: #ff4081;
+}
+
+.purple { 
+    color: #7c47d8; 
+    background-color: #f0f0f0;
+}
+.green { 
+    color: #57d15d; 
+    background-color: rgb(205, 250, 250);
+}
