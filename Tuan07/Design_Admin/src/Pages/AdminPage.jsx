@@ -1,3 +1,5 @@
+import Header from '../components/Header';
+import Menu from '../components/Menu';
 import './AdminPage.css'
 
 export default function AdminPage() {
@@ -5,12 +7,10 @@ export default function AdminPage() {
         <>
             <div className="container">
                 <div className="header">
-                    <h2>My Header</h2>
+                    <Header />
                 </div>
-                <div className="menu">
-                    <a href="#">Link 1</a><br />
-                    <a href="#">Link 2</a><br />
-                    <a href="#">Link 3</a>
+                <div className="menu border-r-1">
+                    <Menu />
                 </div>
                 <div className="content">
                     <h3>OverView</h3>
