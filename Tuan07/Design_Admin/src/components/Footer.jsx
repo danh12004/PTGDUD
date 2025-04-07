@@ -1,67 +1,5 @@
+import { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
-
-const data = [
-  {
-    id: 1,
-    name: "Elizabeth Lee",
-    company: "AvatarSystems",
-    order: "$359",
-    date: "10/07/2023",
-    status: "New",
-    avatar: "./public/Avatar.png",
-    img: "./public/create.png",
-  },
-  {
-    id: 2,
-    name: "Carlos Garcia",
-    company: "SmoozeShift",
-    order: "$747",
-    date: "24/07/2023",
-    status: "New",
-    avatar: "./public/Avatar (1).png",
-    img: "./public/create.png",
-  },
-  {
-    id: 3,
-    name: "Elizabeth Bailey",
-    company: "Prime Time Telecom",
-    order: "$564",
-    date: "08/08/2023",
-    status: "In-progress",
-    avatar: "./public/Avatar (2).png",
-    img: "./public/create.png",
-  },
-  {
-    id: 4,
-    name: "Ryan Brown",
-    company: "OmniTech Corporation",
-    order: "$541",
-    date: "31/08/2023",
-    status: "In-progress",
-    avatar: "./public/Avatar (3).png",
-    img: "./public/create.png",
-  },
-  {
-    id: 5,
-    name: "Ryan Young",
-    company: "DataStream Inc.",
-    order: "$769",
-    date: "01/05/2023",
-    status: "Completed",
-    avatar: "./public/Avatar (4).png",
-    img: "./public/create.png",
-  },
-  {
-    id: 6,
-    name: "Hailey Adams",
-    company: "FlowRush",
-    order: "$922",
-    date: "10/06/2023",
-    status: "Completed",
-    avatar: "./public/Avatar (5).png",
-    img: "./public/create.png",
-  },
-];
 
 const getStatusClass = (status) => {
   switch (status) {
@@ -88,11 +26,7 @@ const columns = [
     sortable: true,
     cell: (row) => (
       <div className="flex items-center space-x-2">
-        <img
-          src={row.avatar}
-          alt={row.name}
-          className="w-8 h-8 rounded-full"
-        />
+        <img src={row.avatar} alt={row.name} className="w-8 h-8 rounded-full" />
         <span className="font-semibold">{row.name}</span>
       </div>
     ),
@@ -136,10 +70,20 @@ const columns = [
       />
     ),
     width: "60px",
-  }
+  },
 ];
 
 export default function Footer() {
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    fetch("https://run.mocky.io/v3/e01d737d-4866-48ca-a289-c630ddf44ce3")
+      .then((res) => res.json()) 
+      .then((data) => setCards(data))
+      .catch((err) => console.error("Failed to fetch:", err));
+  }, []);
+  
+
   return (
     <div className="p-6">
       <div className="flex items-center space-x-3 mb-4">
@@ -149,7 +93,7 @@ export default function Footer() {
 
       <DataTable
         columns={columns}
-        data={data}
+        data={cards}
         pagination
         highlightOnHover
         striped
