@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router'; 
 
 export default function Menu() {
     const [active, setActive] = useState("Dashboard");
@@ -17,7 +18,7 @@ export default function Menu() {
                 }`}
             >
                 <img src="./public/Squares four 1.png" alt="" />
-                <a href="#" className="ml-3">Dashboard</a>
+                <Link to="/" className="ml-3">Dashboard</Link>
             </div>
             <div
                 onClick={() => handleClickActive("Projects")}
@@ -26,7 +27,7 @@ export default function Menu() {
                 }`}
             >
                 <img src="./public/Folder.png" alt="" />
-                <a href="#" className="ml-3">Projects</a>
+                <Link to="/projects" className="ml-3">Projects</Link>
             </div>
             <div
                 onClick={() => handleClickActive("Teams")}
@@ -35,7 +36,7 @@ export default function Menu() {
                 }`}
             >
                 <img src="./public/Groups.png" alt="" />
-                <a href="#" className="ml-3">Teams</a>
+                <Link to="/teams" className="ml-3">Teams</Link>
             </div>
             <div
                 onClick={() => handleClickActive("Analytics")}
@@ -44,7 +45,7 @@ export default function Menu() {
                 }`}
             >
                 <img src="./public/Pie chart.png" alt="" />
-                <a href="#" className="ml-3">Analytics</a>
+                <Link to="/analytics" className="ml-3">Analytics</Link>
             </div>
             <div
                 onClick={() => handleClickActive("Messages")}
@@ -53,7 +54,7 @@ export default function Menu() {
                 }`}
             >
                 <img src="./public/Chat.png" alt="" />
-                <a href="#" className="ml-3">Messages</a>
+                <Link to="/messages" className="ml-3">Messages</Link>
             </div>
             <div
                 onClick={() => handleClickActive("Integration")}
@@ -62,7 +63,7 @@ export default function Menu() {
                 }`}
             >
                 <img src="./public/Code.png" alt="" />
-                <a href="#" className="ml-3">Integration</a>
+                <Link to="/integration" className="ml-3">Integration</Link>
             </div>
 
             <div className="mt-10 p-5 text-center bg-blue-100">
