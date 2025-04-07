@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Menu() {
     const [active, setActive] = useState("Dashboard");
 
-    const handleClick = (menuItem) => {
+    const handleClickActive = (menuItem) => {
         setActive(menuItem);
     };
 
@@ -11,7 +11,7 @@ export default function Menu() {
         <div>
             <img src="./public/Logo.png" alt="" />
             <div
-                onClick={() => handleClick("Dashboard")}
+                onClick={() => handleClickActive("Dashboard")}
                 className={`mt-3 text-semini-400 flex items-center p-2 rounded-lg ${
                     active === "Dashboard" ? "bg-pink-500 text-white font-bold" : ""
                 }`}
@@ -20,7 +20,7 @@ export default function Menu() {
                 <a href="#" className="ml-3">Dashboard</a>
             </div>
             <div
-                onClick={() => handleClick("Projects")}
+                onClick={() => handleClickActive("Projects")}
                 className={`mt-3 text-semini-400 flex items-center p-2 rounded-lg ${
                     active === "Projects" ? "bg-pink-500 text-white font-bold" : ""
                 }`}
@@ -29,7 +29,7 @@ export default function Menu() {
                 <a href="#" className="ml-3">Projects</a>
             </div>
             <div
-                onClick={() => handleClick("Teams")}
+                onClick={() => handleClickActive("Teams")}
                 className={`mt-3 text-semini-400 flex items-center p-2 rounded-lg ${
                     active === "Teams" ? "bg-pink-500 text-white font-bold" : ""
                 }`}
@@ -38,7 +38,7 @@ export default function Menu() {
                 <a href="#" className="ml-3">Teams</a>
             </div>
             <div
-                onClick={() => handleClick("Analytics")}
+                onClick={() => handleClickActive("Analytics")}
                 className={`mt-3 text-semini-400 flex items-center p-2 rounded-lg ${
                     active === "Analytics" ? "bg-pink-500 text-white font-bold" : ""
                 }`}
@@ -47,7 +47,7 @@ export default function Menu() {
                 <a href="#" className="ml-3">Analytics</a>
             </div>
             <div
-                onClick={() => handleClick("Messages")}
+                onClick={() => handleClickActive("Messages")}
                 className={`mt-3 text-semini-400 flex items-center p-2 rounded-lg ${
                     active === "Messages" ? "bg-pink-500 text-white font-bold" : ""
                 }`}
@@ -56,7 +56,7 @@ export default function Menu() {
                 <a href="#" className="ml-3">Messages</a>
             </div>
             <div
-                onClick={() => handleClick("Integration")}
+                onClick={() => handleClickActive("Integration")}
                 className={`mt-3 text-semini-400 flex items-center p-2 rounded-lg ${
                     active === "Integration" ? "bg-pink-500 text-white font-bold" : ""
                 }`}
