@@ -5,10 +5,9 @@
         "menu content"
         "menu footer";
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: auto 1fr auto; 
+    grid-template-rows: 60px 280px auto; 
     gap: 5px;
     padding: 5px;
-    height: 100vh;
 }
 
 .container > div {

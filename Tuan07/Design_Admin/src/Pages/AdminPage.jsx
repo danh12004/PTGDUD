@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Menu from '../components/Menu';
 import Overview from '../components/Overview';
+import Footer from '../components/Footer';
 import './AdminPage.css'
 
 export default function AdminPage() {
@@ -17,27 +18,7 @@ export default function AdminPage() {
                     <Overview />
                 </div>
                 <div className="footer">
-                    <h4>Table</h4>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Column 1</th>
-                                <th>Column 2</th>
-                                <th>Column 3</th>
-                                <th>Column 4</th>
-                                <th>Column 5</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                                <td>Danh</td>
-                                <td>Danh</td>
-                                <td>Danh</td>
-                                <td>Danh</td>
-                                <td>Danh</td>
-                           </tr>
-                        </tbody>
-                    </table>
+                    <Footer />
                 </div>
             </div>
         </>
