@@ -3,6 +3,7 @@ import Menu from '../components/Menu';
 import Overview from '../components/Overview';
 import Footer from '../components/Footer';
 import './AdminPage.css'
+import { Outlet } from 'react-router';
 
 export default function AdminPage() {
     return (
@@ -18,7 +19,7 @@ export default function AdminPage() {
                     <Overview />
                 </div>
                 <div className="footer">
-                    <Footer />
+                    <Outlet />
                 </div>
             </div>
         </>
